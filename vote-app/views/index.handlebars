@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dashboard</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <h2 style="text-align: center;padding-bottom: 0.1in;font-size: 0.4in" >Vote Result</h2>
+    <table class="table">
+            <tr>
+                <td style="padding-left: 1in;font-size: 0.2in">Jordan</td>
+                <td style="padding-right: 0.35in;font-size: 0.2in"><pre1></pre1></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 1in;font-size: 0.2in">Madison</td>
+                <td style="padding-right: 0.35in;font-size: 0.2in"><pre2></pre2></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 1in;font-size: 0.2in">Caesar</td>
+                <td style="padding-right: 0.35in;font-size: 0.2in"><pre3></pre3></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 1in;font-size: 0.2in">Kimberly</td>
+                <td style="padding-right: 0.35in;font-size: 0.2in"><pre4></pre4></td>
+            </tr>
+        </tbody>
+    </table> 
+    <script type="text/javascript">
+
+        var Display1 = document.querySelector('pre1');
+        var Display2 = document.querySelector('pre2');
+        var Display3 = document.querySelector('pre3');
+        var Display4 = document.querySelector('pre4');
+        var url = 'http://localhost:3000/api/test.candidateList';
+        let Obj;
+        fetch(url).then(function(response) {
+            response.json().then(function(Obj) {
+                Display1.textContent = Obj[0].A;
+                Display2.textContent = Obj[0].B;
+                Display3.textContent = Obj[0].C;
+                Display4.textContent = Obj[0].D;
+            });
+        });
+        
+  </script>
+   <body style="padding: 0.6in;padding-left: 4in;padding-right: 4in">
+
+</body>
+ </html>

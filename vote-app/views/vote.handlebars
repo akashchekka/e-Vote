@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VOTE</title>
+</head>
+<body>
+    <h3 class="text-muted">Vote</h3><br>
+    <div style="text-align:center">
+        <h4>
+            <p>
+                1.Jordan
+            </p>
+        </h4><br>
+        <h4>
+            <p>
+                2.Madison
+            </p>
+        </h4><br>
+        <h4>
+            <p>
+                3.Caesar
+            </p>
+        </h4><br>
+        <h4>
+            <p>
+                4.Kimberly
+            </p>
+        </h4>
+    </div>
+   
+    {{#if test}}
+        <div class="alert alert-success">Transaction submitted successfully</div> 
+    {{/if}}
+
+   <form method="post" action="/users/vote">
+   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Your ID" name="id">
+   </div>
+   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Leader ID" name="lix">
+   </div>
+   <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</body>
+</html>

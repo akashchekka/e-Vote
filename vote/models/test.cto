@@ -1,0 +1,27 @@
+namespace test
+
+asset Account identified by accountId {
+  o String accountId
+  --> voter Id
+  o Double candidateId
+}
+
+participant voter identified by voterId {
+  o String voterId
+  o String firstName
+  o String lasName
+}
+
+asset candidateList identified by listId {
+  o String listId
+  o Double A
+  o Double B
+  o Double C
+  o Double D
+}
+
+transaction vote {
+  --> Account Id
+  --> candidateList iD
+  o Double candidateId
+}

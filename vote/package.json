@@ -1,0 +1,22 @@
+{
+  "name": "vote",
+  "version": "0.0.1",
+  "description": "A simple voting application",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "AB",
+  "email": "chekkaakash1998@gmail.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-common": "latest",
+    "composer-connector-embedded": "latest",
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest"
+  }
+}
